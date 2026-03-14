@@ -23,12 +23,18 @@ const services = [
   },
 ];
 
+const sectionTitle = {
+  pl: 'Czym się zajmuję',
+  en: 'What I do',
+};
+
 export const Services = () => {
   const { lang } = useLang();
 
   return (
     <section id="services" className="border-b border-border">
       <div className="container py-24">
+        <h2 className="text-2xl font-bold mb-8">{t(lang, sectionTitle.pl, sectionTitle.en)}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {services.map((s, i) => (
             <div key={i} className="bg-card p-8">
